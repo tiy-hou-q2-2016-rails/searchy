@@ -9,7 +9,7 @@
     <div class="page-result">
       <%= link_to page.title, page.uri %>
       <p>
-        <%= highlight (truncate page.content, length: 400), params[:qs] %>
+        <%= highlight truncate_search(page.content, params[:qs]), params[:qs] %>
       </p>
     </div>
   <% end %>

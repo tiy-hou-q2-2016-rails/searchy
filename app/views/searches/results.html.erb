@@ -5,7 +5,8 @@
 
   <%= paginate @pages, :theme => 'twitter-bootstrap-3' %>
 
-  <% @pages.each do |page| %>
+  <% @pages.each do |doc| %>
+    <% page = doc.searchable %>
     <div class="page-result">
       <%= link_to page.title, page.uri %>
       <p>

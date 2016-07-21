@@ -3,7 +3,7 @@ class SearchesController < ApplicationController
 
     if params[:qs].present?
       # actually do the search
-      @pages = Page.search(params[:qs]).page(params[:page])
+      @pages = PgSearch.multisearch(params[:qs]).page(params[:page]).includes(:searchable)
       render :results
     else
       render :new

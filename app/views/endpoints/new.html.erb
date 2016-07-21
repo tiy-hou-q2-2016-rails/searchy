@@ -1,0 +1,13 @@
+<div class="container">
+
+  <%= form_tag create_endpoint_path do %>
+    <div class="form-group">
+      <%= text_field_tag :url, params[:url], class: "form-control", placeholder: "URL You'd like us to search" %>
+    </div>
+
+    <div class="form-group">
+      <%= submit_tag "Add URL", class: "btn btn-success" %>
+    </div>
+  <% end %>
+
+</div>

@@ -5,7 +5,7 @@
     <div class="page-result">
       <%= link_to page.title, page.uri %>
       <p>
-        <%= highlight page.content, params[:qs] %>
+        <%= highlight (truncate page.content, length: 400), params[:qs] %>
       </p>
     </div>
   <% end %>

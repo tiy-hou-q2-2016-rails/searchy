@@ -9,6 +9,15 @@
   </head>
 
   <body>
+
+    <div class="well">
+      <div class="container">
+        Searching exactly <%= pluralize Page.count, 'page' %>
+
+        <%= link_to 'New Endpoint', new_endpoint_path %>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>

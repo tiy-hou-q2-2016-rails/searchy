@@ -1,0 +1,13 @@
+<div class="result-page container">
+  <%= render partial: 'form' %>
+
+  <% @pages.each do |page| %>
+    <div class="page-result">
+      <%= link_to page.title, page.uri %>
+      <p>
+        <%= highlight page.content, params[:qs] %>
+      </p>
+    </div>
+  <% end %>
+
+</div>

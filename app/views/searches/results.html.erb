@@ -1,6 +1,10 @@
 <div class="result-page container">
   <%= render partial: 'form' %>
 
+  <p>Found <%= pluralize @pages.total_count, 'result' %> for <%= params[:qs] %>.</p>
+
+  <%= paginate @pages, :theme => 'twitter-bootstrap-3' %>
+
   <% @pages.each do |page| %>
     <div class="page-result">
       <%= link_to page.title, page.uri %>
